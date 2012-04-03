@@ -202,6 +202,9 @@ featureset_generate(
     chisquare_table_005[9] = 16.92;
     chisquare_table_005[10] = 18.31;
     
+    float chisquare_table_001_dof2 = 9.21;
+    float chisquare_table_0001_dof2 = 13.82;
+    
     float chisquare_table_005_value = chisquare_table_005[ANJAN_NUM_LABEL - 1];
     //free chisquared table
     free(chisquare_table_005);
@@ -262,14 +265,11 @@ featureset_generate(
         if(f->type == 1){
             //transition feature
             fprintf(stdout, "Transition chisquared_obs = %f, table = %f\n", f->chisquared_value, chisquare_table_005_value);
-            ++n;
-            ++number_of_features_without_selection;
-        } else {
-            if (minfreq <= f->freq &&  f->chisquared_value < chisquare_table_005_value ) {
-                ++n;
-            }
-            ++number_of_features_without_selection;
         }
+        if (minfreq <= f->freq &&  f->chisquared_value > chisquare_table_005_value ) {
+            ++n;
+        }
+        ++number_of_features_without_selection;
     }
     fprintf(stdout, "Feature before selection: %ld \t after selection: %ld\n", number_of_features_without_selection, n);
 
@@ -278,14 +278,11 @@ featureset_generate(
     if (features != NULL) {
         node = NULL;
         while ((node = rumavl_node_next(set->avl, node, 1, (void**)&f)) != NULL) {
-            if(f->type == 1){
+            //fprintf(stdout, "Feature: type:%d, %d --> %d ____ freq:%f", f->type, f->src, f->dst, f->freq);
+            //fprintf(stdout, "\n");
+            if (minfreq <= f->freq &&  f->chisquared_value > chisquare_table_005_value) {
                 memcpy(&features[k], f, sizeof(crf1df_feature_t));
                 ++k;
-            } else {
-                if (minfreq <= f->freq &&  f->chisquared_value < chisquare_table_005_value) {
-                    memcpy(&features[k], f, sizeof(crf1df_feature_t));
-                    ++k;
-                }
             }
         }
         *ptr_num_features = n;
