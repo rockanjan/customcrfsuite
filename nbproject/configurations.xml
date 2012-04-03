@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="crfsuite-0.12" root=".">
+      <df name="example">
+      </df>
+      <df name="frontend">
+        <in>dump.c</in>
+        <in>iwa.c</in>
+        <in>iwa.h</in>
+        <in>learn.c</in>
+        <in>main.c</in>
+        <in>option.c</in>
+        <in>option.h</in>
+        <in>readdata.h</in>
+        <in>reader.c</in>
+        <in>tag.c</in>
+      </df>
+      <df name="include">
+        <in>crfsuite.h</in>
+        <in>crfsuite.hpp</in>
+        <in>crfsuite_api.hpp</in>
+        <in>os.h</in>
+      </df>
+      <df name="lib">
+        <df name="cqdb">
+          <df name="include">
+            <in>cqdb.h</in>
+          </df>
+          <df name="src">
+            <in>cqdb.c</in>
+            <in>lookup3.c</in>
+          </df>
+        </df>
+        <df name="crf">
+          <df name="src">
+            <in>crf1d.h</in>
+            <in>crf1d_context.c</in>
+            <in>crf1d_encode.c</in>
+            <in>crf1d_feature.c</in>
+            <in>crf1d_model.c</in>
+            <in>crf1d_tag.c</in>
+            <in>crfsuite.c</in>
+            <in>crfsuite_internal.h</in>
+            <in>crfsuite_train.c</in>
+            <in>dataset.c</in>
+            <in>dictionary.c</in>
+            <in>holdout.c</in>
+            <in>logging.c</in>
+            <in>logging.h</in>
+            <in>params.c</in>
+            <in>params.h</in>
+            <in>quark.c</in>
+            <in>quark.h</in>
+            <in>rumavl.c</in>
+            <in>rumavl.h</in>
+            <in>train_arow.c</in>
+            <in>train_averaged_perceptron.c</in>
+            <in>train_l2sgd.c</in>
+            <in>train_lbfgs.c</in>
+            <in>train_passive_aggressive.c</in>
+            <in>vecmath.h</in>
+          </df>
+        </df>
+      </df>
+      <df name="swig">
+        <df name="python">
+          <in>export_wrap.cpp</in>
+          <in>export_wrap.h</in>
+        </df>
+        <in>crfsuite.cpp</in>
+        <in>export.i</in>
+      </df>
+      <df name="win32">
+        <in>stdint.h</in>
+      </df>
+      <in>config.h</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>frontend/.libs/crfsuite</executablePath>
+          <cTool>
+            <incDir>
+              <pElem>.</pElem>
+              <pElem>include</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>HAVE_CONFIG_H</Elem>
+              <Elem>USE_SSE</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <folder path="crfsuite-0.12/frontend">
+        <cTool>
+          <incDir>
+            <pElem>frontend</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="crfsuite-0.12/lib">
+        <cTool>
+          <incDir>
+            <pElem>lib/cqdb/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>PIC</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="crfsuite-0.12/lib/cqdb">
+        <cTool>
+          <incDir>
+            <pElem>lib/cqdb</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="crfsuite-0.12/lib/crf">
+        <cTool>
+          <incDir>
+            <pElem>lib/crf</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="include/crfsuite.hpp" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="include/crfsuite_api.hpp" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="swig/crfsuite.cpp" ex="true" tool="1" flavor="0">
+      </item>
+      <item path="swig/export.i" ex="true" tool="0" flavor="0">
+      </item>
+      <item path="swig/python/export_wrap.cpp" ex="true" tool="1" flavor="0">
+      </item>
+      <item path="swig/python/export_wrap.h" ex="true" tool="3" flavor="0">
+      </item>
+      <item path="win32/stdint.h" ex="true" tool="3" flavor="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

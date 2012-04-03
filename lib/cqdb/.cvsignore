@@ -1,0 +1,5 @@
+libcqdb.la
+.deps
+libcqdb_la-cqdb.lo
+.libs
+libcqdb_la-lookup3.lo

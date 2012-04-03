@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="crf" root=".">
+      <df name="src">
+        <in>crf1d.h</in>
+        <in>crf1d_context.c</in>
+        <in>crf1d_encode.c</in>
+        <in>crf1d_feature.c</in>
+        <in>crf1d_model.c</in>
+        <in>crf1d_tag.c</in>
+        <in>crfsuite.c</in>
+        <in>crfsuite_internal.h</in>
+        <in>crfsuite_train.c</in>
+        <in>dataset.c</in>
+        <in>dictionary.c</in>
+        <in>holdout.c</in>
+        <in>logging.c</in>
+        <in>logging.h</in>
+        <in>params.c</in>
+        <in>params.h</in>
+        <in>quark.c</in>
+        <in>quark.h</in>
+        <in>rumavl.c</in>
+        <in>rumavl.h</in>
+        <in>train_arow.c</in>
+        <in>train_averaged_perceptron.c</in>
+        <in>train_l2sgd.c</in>
+        <in>train_lbfgs.c</in>
+        <in>train_passive_aggressive.c</in>
+        <in>vecmath.h</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>../../include</pElem>
+              <pElem>../cqdb/include</pElem>
+              <pElem>../..</pElem>
+              <pElem>.</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>HAVE_CONFIG_H</Elem>
+              <Elem>PIC</Elem>
+              <Elem>USE_SSE</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+      </makefileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
