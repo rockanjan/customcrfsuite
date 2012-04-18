@@ -24,18 +24,20 @@
       </nativedebugger>
       <runprofile version="9">
         <runcommandpicklist>
-          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /home/anjan/Dropbox/sample.model /home/anjan/Dropbox/</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /home/anjan/Dropbox/sample.model /home/anjan/Dropbox/sample_attribute_file</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /home/anjan/Dropbox/sample.model /home/anjan/Dropbox/sample_attribute_file_two</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m </runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /src/srl/</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr02/train.featsel.model -p max_iterations=1500 /work/srl/apr02/train.crfsuite</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr02/train.nofeatsel.model -p max_iterations=1500 /work/srl/apr02/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr03/iden_0001.model -p max_iterations=1500 /work/srl/apr03/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr05/iden_0001.model -p max_iterations=1500 /work/srl/apr05/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr05/iden_0001_C2_5.model -p c2=10 -p max_iterations=1500 /work/srl/apr05/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr05/iden_0001_C2_15.model -p c2=15 -p max_iterations=1500 /work/srl/apr05/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr05/iden_0001_C2_15.model -p c2=5 -p max_iterations=1500 /work/srl/apr05/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr05/iden_0001_C2_5.model -p c2=5 -p max_iterations=1500 /work/srl/apr05/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr10/iden_0001_C2_5.model -p c2=5 -p max_iterations=1500 /work/srl/apr10/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr11/iden_0001_C2_5.model -p c2=5 -p max_iterations=1500 /work/srl/apr11/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr13/iden_0001_C2_5.model -p c2=5 -p max_iterations=1500 /work/srl/apr13/train.crfsuite</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" learn -m /work/srl/apr14/iden_0001_C2_5.model -p c2=5 -p max_iterations=1500 /work/srl/apr14/train.crfsuite</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" learn -m /work/srl/apr02/train.nofeatsel.model -p max_iterations=1500 /work/srl/apr02/train.crfsuite</runcommand>
+        <runcommand>"${OUTPUT_PATH}" learn -m /work/srl/apr14/iden_0001_C2_5.model -p c2=5 -p max_iterations=1500 /work/srl/apr14/train.crfsuite</runcommand>
         <rundir>.</rundir>
-        <buildfirst>true</buildfirst>
+        <buildfirst>false</buildfirst>
         <terminal-type>0</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>
         <environment>

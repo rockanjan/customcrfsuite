@@ -413,7 +413,8 @@ int main_learn(int argc, char *argv[], const char *argv0)
         }
 
     } else {
-        if (ret = trainer->train(trainer, &data, opt.model, opt.holdout)) { //goes to crfsuite_train_train method of crfsuite_train.c
+        //goes to crfsuite_train_train method of crfsuite_train.c
+        if (ret = trainer->train(trainer, &data, opt.model, opt.holdout)) { 
             goto force_exit;
         }
 

@@ -443,6 +443,7 @@ crf1de_set_data(
     logging(lg, "feature.possible_states: %d\n", opt->feature_possible_states);
     logging(lg, "feature.possible_transitions: %d\n", opt->feature_possible_transitions);
     begin = clock();
+    //feature generation call
     crf1de->features = crf1df_generate(
         &crf1de->num_features,
         ds,
@@ -773,7 +774,7 @@ static int encoder_initialize(encoder_t *self, dataset_t *ds, logging_t *lg)
 {
     int ret;
     crf1de_t *crf1de = (crf1de_t*)self->internal;
-
+//goes to feature generation from following line
     ret = crf1de_set_data(
         crf1de,
         ds,
